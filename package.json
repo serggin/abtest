@@ -1,0 +1,58 @@
+{
+  "name": "ab-test",
+  "version": "1.0.0",
+  "description": "AB Test Real test task",
+  "main": "index.js",
+  "scripts": {
+    "client": "webpack serve --devtool inline-source-map --hot --config webpack.client.config.js",
+    "client:build": "webpack --config webpack.client.build.config.js",
+    "server": "export NODE_ENV=development&&nodemon --exec babel-node --watch src/server src/server/index.js",
+    "server:build": "webpack --config webpack.server.build.config.js",
+    "server:production": "node dist/server/bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "serggin",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "formik": "^2.2.6",
+    "nodemon": "^2.0.7",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "sqlite-async": "^1.1.1",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@babel/eslint-parser": "^7.13.8",
+    "@babel/node": "^7.13.0",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-proposal-decorators": "^7.13.5",
+    "@babel/plugin-proposal-export-namespace-from": "^7.12.13",
+    "@babel/plugin-proposal-function-sent": "^7.12.13",
+    "@babel/plugin-proposal-numeric-separator": "^7.12.13",
+    "@babel/plugin-proposal-throw-expressions": "^7.12.13",
+    "@babel/preset-env": "^7.13.9",
+    "@babel/preset-react": "^7.12.13",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^5.1.1",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.21.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.2.0",
+    "style-loader": "^2.0.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.24.3",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-node-externals": "^2.5.2"
+  },
+  "keywords": [
+    "example",
+    "heroku"
+  ],
+  "engines": {
+    "node": "12.x"
+  }
+}
